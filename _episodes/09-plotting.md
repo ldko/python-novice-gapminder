@@ -147,6 +147,24 @@ plt.ylabel('GDP per capita ($)')
 {: .callout}
 
 
+> ## Saving your plot to a file
+> 
+> If you are satisfied with the plot you see you may want to save it to a file,
+> perhaps to include it in a publication. There is a function in the
+> matplotlib.pyplot module that accomplishes this:
+> [savefig](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html).
+> Calling this function, e.g. with
+> ~~~
+> plt.savefig('my_figure.png')
+> ~~~
+> {: .language-python}
+> 
+> will save the current figure to the file `my_figure.png`. The file format
+> will automatically be deduced from the file name extension (other formats
+> are pdf, ps, eps and svg).
+{: .callout}
+
+
 ![GDP formatted plot for Australia and New Zealand](../fig/9_gdp_australia_nz_formatted.svg)
 *   Plot a scatter plot correlating the GDP of Australia and New Zealand
 *   Use either `plt.scatter` or `DataFrame.plot.scatter`
@@ -166,14 +184,13 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 
 > ## Minima and Maxima
 >
-> Fill in the blanks below to plot the minimum GDP per capita over time
-> for all the countries in Europe.
-> Modify it again to plot the maximum GDP per capita over time for Europe.
+> Fill in the blanks below to plot the minimum and maximum GDP
+> capita over time for all the countries in Europe.
 >
 > ~~~
 > data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > data_europe.____.plot(label='min')
-> data_europe.____
+> data_europe.____.____
 > plt.legend(loc='best')
 > plt.xticks(rotation=90)
 > ~~~
