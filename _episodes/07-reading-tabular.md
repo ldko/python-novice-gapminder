@@ -235,6 +235,7 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > > column name 'country' to the parameter `index_col` in order to index by country:
 > > ~~~
 > > americas = pd.read_csv('data/gapminder_gdp_americas.csv', index_col='country')
+> > print(americas.describe())
 > > ~~~
 > >{: .language-python}
 > {: .solution}
