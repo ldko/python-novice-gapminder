@@ -156,6 +156,7 @@ plt.ylabel('GDP per capita ($)')
 > [savefig](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html).
 > Calling this function, e.g. with
 > ~~~
+> # add this in the same cell as previous and re-execute!
 > plt.savefig('gdp_oceania.png')
 > ~~~
 > {: .language-python}
