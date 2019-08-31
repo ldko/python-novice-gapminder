@@ -55,6 +55,22 @@ fourth item of pressures: 0.276
 ~~~
 {: .output}
 
+## Indexing beyond the end of the collection is an error.
+
+*   Python reports an `IndexError` if we attempt to access a value that doesn't exist.
+    *   This is a kind of [runtime error]({{ page.root }}/04-built-in/#runtime-error).
+    *   Cannot be detected as the code is parsed
+        because the index might be calculated based on data.
+
+~~~
+print('99th element of pressures:', pressures[99])
+~~~
+{: .language-python}
+~~~
+IndexError: list index out of range
+~~~
+{: .output}
+
 ## Lists' values can be replaced by assigning to them.
 
 *   Use an index expression on the left of assignment to replace a value.
@@ -68,6 +84,40 @@ print('pressures is now:', pressures)
 pressures is now: [0.265, 0.275, 0.277, 0.275, 0.276]
 ~~~
 {: .output}
+
+## Recall character strings can be indexed like lists.
+
+*   Lists and character strings are both *collections*.
+*   Remember from in learning about variables yesterday, you can
+    get single characters from a character string using indexes in square brackets.
+
+~~~
+element = 'carbon'
+print('zeroth character:', element[0])
+~~~
+{: .language-python}
+~~~
+zeroth character: c
+~~~
+{: .output}
+
+## Unlike lists, character strings are immutable.
+
+~~~
+element[0] = 'C'
+~~~
+{: .language-python}
+~~~
+TypeError: 'str' object does not support item assignment
+~~~
+{: .error}
+
+*   Cannot change the characters in a string after it has been created.
+    *   *Immutable*: can't be changed after creation.
+    *   In contrast, lists are *mutable*: they can be modified in place.
+    *   That is why we could change `pressures[0]`.
+*   Python considers the string to be a single value with parts,
+    not a collection of values.
 
 ## Appending items to a list lengthens it.
 
@@ -148,57 +198,6 @@ primes after removing last item: [2, 3, 5, 7]
 goals = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
 ~~~
 {: .language-python}
-
-## Character strings can be indexed like lists.
-
-*   Get single characters from a character string using indexes in square brackets.
-
-~~~
-element = 'carbon'
-print('zeroth character:', element[0])
-print('third character:', element[3])
-~~~
-{: .language-python}
-~~~
-zeroth character: c
-third character: b
-~~~
-{: .output}
-
-## Character strings are immutable.
-
-*   Cannot change the characters in a string after it has been created.
-    *   *Immutable*: can't be changed after creation.
-    *   In contrast, lists are *mutable*: they can be modified in place.
-*   Python considers the string to be a single value with parts,
-    not a collection of values.
-
-~~~
-element[0] = 'C'
-~~~
-{: .language-python}
-~~~
-TypeError: 'str' object does not support item assignment
-~~~
-{: .error}
-
-*   Lists and character strings are both *collections*.
-
-## Indexing beyond the end of the collection is an error.
-
-*   Python reports an `IndexError` if we attempt to access a value that doesn't exist.
-    *   This is a kind of [runtime error]({{ page.root }}/04-built-in/#runtime-error).
-    *   Cannot be detected as the code is parsed
-        because the index might be calculated based on data.
-
-~~~
-print('99th element of element is:', element[99])
-~~~
-{: .language-python}
-~~~
-IndexError: string index out of range
-~~~
-{: .output}
 
 > ## Fill in the Blanks
 >
