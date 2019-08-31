@@ -165,6 +165,23 @@ primes has finally become: [2, 3, 5, 7, 9, 11, 13, 17, 19, [37, 41, 43, 47]]
 Note that while `extend` maintains the "flat" structure of the list, appending a list to a list makes the result
 two-dimensional - the last element in `primes` is a list, not an integer.
 
+## Above shows that lists may contain values of different types.
+
+*   We made the last element of what was a list of integers, a list.
+{: .language-python}
+~~~
+last_element = primes[-1]
+print('last element is', last_element, 'of type', type(last_element))
+~~~
+{: .output}
+
+*   A single list may contain numbers, strings, and anything else.
+
+~~~
+goals = [1, 'Create lists.', 2, 'Modify lists.']
+~~~
+{: .language-python}
+
 ## Use `del` to remove items from a list entirely.
 
 *   `del list_name[index]` removes an item from a list and shortens the list.
@@ -189,15 +206,6 @@ primes after removing last item: [2, 3, 5, 7]
     *   "The zero of lists."
 *   Helpful as a starting point for collecting values
         (which we will see in the [next episode]({% link _episodes/12-for-loops.md %}).
-
-## Lists may contain values of different types.
-
-*   A single list may contain numbers, strings, and anything else.
-
-~~~
-goals = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
-~~~
-{: .language-python}
 
 > ## Fill in the Blanks
 >
