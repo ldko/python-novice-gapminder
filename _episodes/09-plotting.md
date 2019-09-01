@@ -182,13 +182,13 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 
 ![GDP correlation using data.T.plot.scatter](../fig/9_gdp_correlation_data.svg)
 
-> ## Minima and Maxima
+> ## Minima and Maxima [DO THIS]
 >
 > Fill in the blanks below to plot the minimum and maximum GDP
 > capita over time for all the countries in Europe.
 >
 > ~~~
-> data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+> data_europe = pd.____('data/gapminder_gdp_europe.csv', index_col='country')
 > data_europe.____.plot(label='min')
 > data_europe.____.____
 > plt.legend(loc='best')
@@ -254,7 +254,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > {: .solution}
 {: .challenge}
 
-> ## More Correlations
+> ## More Correlations [DO THIS]
 >
 > This short program creates a plot showing
 > the correlation between GDP and life expectancy for 2007,
