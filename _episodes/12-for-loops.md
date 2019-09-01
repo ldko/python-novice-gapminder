@@ -211,10 +211,11 @@ print(total)
 > {: .solution}
 {: .challenge}
 
-> ## Reversing a String
+> ## Reversing a String [DO THIS]
 >
 > Fill in the blanks in the program below so that it prints "nit"
 > (the reverse of the original character string "tin").
+> Hint: You can combine strings with `+`: `'a' + 'b'` becomes `ab`.
 >
 > ~~~
 > original = "tin"
