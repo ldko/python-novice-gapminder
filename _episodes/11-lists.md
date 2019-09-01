@@ -47,11 +47,13 @@ length: 5
 ~~~
 print('zeroth item of pressures:', pressures[0])
 print('fourth item of pressures:', pressures[4])
+print('last item of pressures:', pressures[-1])
 ~~~
 {: .language-python}
 ~~~
 zeroth item of pressures: 0.273
 fourth item of pressures: 0.276
+last item of pressures: 0.276
 ~~~
 {: .output}
 
