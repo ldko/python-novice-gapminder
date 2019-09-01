@@ -170,6 +170,7 @@ two-dimensional - the last element in `primes` is a list, not an integer.
 ## Above shows that lists may contain values of different types.
 
 *   We made the last element of what was a list of integers, a list.
+
 ~~~
 last_element = primes[-1]
 print('last element is', last_element, 'of type', type(last_element))
@@ -208,7 +209,24 @@ primes after removing last item: [2, 3, 5, 7]
 *   Helpful as a starting point for collecting values
         (which we will see in the [next episode]({% link _episodes/12-for-loops.md %}).
 
-> ## Fill in the Blanks
+## You can slice a list like we did with strings.
+
+*   This can give you a subset of the list.
+
+~~~
+print(primes[1:3])
+print(primes[0:-1])
+print(primes[:-1])
+~~~
+{: .language-python}
+~~~
+[3, 5]
+[2, 3, 5]
+[2, 3, 5]
+~~~
+{: .output}
+
+> ## Fill in the Blanks [DO THIS]
 >
 > Fill in the blanks so that the program below produces the output shown.
 >
@@ -256,7 +274,7 @@ primes after removing last item: [2, 3, 5, 7]
 > {: .solution}
 {: .challenge}
 
-> ## From Strings to Lists and Back
+> ## From Strings to Lists and Back [DO THIS]
 >
 > Given this:
 >
