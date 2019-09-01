@@ -170,12 +170,11 @@ two-dimensional - the last element in `primes` is a list, not an integer.
 ## Above shows that lists may contain values of different types.
 
 *   We made the last element of what was a list of integers, a list.
-{: .language-python}
 ~~~
 last_element = primes[-1]
 print('last element is', last_element, 'of type', type(last_element))
 ~~~
-{: .output}
+{: .language-python}
 
 *   A single list may contain numbers, strings, and anything else.
 
