@@ -237,7 +237,7 @@ print(total)
 > {: .solution}
 {: .challenge}
 
-> ## Practice Accumulating
+> ## Practice Accumulating [or DO PART of THIS]
 >
 > Fill in the blanks in each of the programs below
 > to produce the indicated result.
