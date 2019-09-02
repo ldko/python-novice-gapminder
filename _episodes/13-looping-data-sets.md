@@ -23,7 +23,8 @@ keypoints:
 import pandas as pd
 for filename in ['data/gapminder_gdp_africa.csv', 'data/gapminder_gdp_asia.csv']:
     data = pd.read_csv(filename, index_col='country')
-    print(filename, data.min())
+    print(filename)
+    print(data.min())
 ~~~
 {: .language-python}
 ~~~
@@ -154,7 +155,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > {: .solution}
 {: .challenge}
 
-> ## Comparing Data
+> ## Comparing Data [MAYBE DO THIS TOGETHER]
 >
 > Write a program that reads in the regional data sets
 > and plots the average GDP per capita for each region over time
@@ -176,7 +177,8 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > >     # `_` as our separator, extract the _<region>.csv, and then strip the .csv extension
 > >     region = filename.rpartition('_')[-1][:-4] 
 > >     dataframe.mean().plot(ax=ax, label=region)
-> > plt.legend()
+> > plt.legend(loc='upper left')
+> > plt.xticks(rotation=90)
 > > plt.show()
 > > ~~~
 > > {: .language-python}
