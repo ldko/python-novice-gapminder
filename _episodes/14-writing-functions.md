@@ -1,4 +1,4 @@
----
+
 title: "Writing Functions"
 teaching: 10
 exercises: 15
@@ -54,6 +54,17 @@ print_greeting()
 {: .language-python}
 ~~~
 Hello!
+~~~
+{: .output}
+
+*   Don't forget the parentheses when calling a function
+
+~~~
+print_greeting
+~~~
+{: .language-python}
+~~~
+<function __main__.print_greeting>
 ~~~
 {: .output}
 
@@ -238,7 +249,7 @@ result of call is: None
 > {: .solution}
 {: .challenge}
 
-> ## Encapsulation
+> ## Encapsulation [DO THIS]
 >
 > Fill in the blanks to create a function that takes a single filename as an argument,
 > loads the data in the file named by the argument,
