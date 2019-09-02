@@ -47,6 +47,7 @@ def print_greeting():
 *   Defining a function does not run it.
     *   Like assigning a value to a variable.
 *   Must call the function to execute the code it contains.
+*   Don't forget the parentheses when calling a function.
 
 ~~~
 print_greeting()
@@ -54,17 +55,6 @@ print_greeting()
 {: .language-python}
 ~~~
 Hello!
-~~~
-{: .output}
-
-*   Don't forget the parentheses when calling a function
-
-~~~
-print_greeting
-~~~
-{: .language-python}
-~~~
-function __main__.print_greeting
 ~~~
 {: .output}
 
