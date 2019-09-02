@@ -238,7 +238,7 @@ result of call is: None
 > {: .solution}
 {: .challenge}
 
-> ## Encapsulation
+> ## Encapsulation [DO THIS]
 >
 > Fill in the blanks to create a function that takes a single filename as an argument,
 > loads the data in the file named by the argument,
@@ -258,7 +258,7 @@ result of call is: None
 > > import pandas as pd
 > > 
 > > def min_in_data(filename):
-> >     data = pd.read_csv(filename)
+> >     data = pd.read_csv(filename, index_col='country')
 > >     return data.min()
 > > ~~~
 > > {: .language-python}
