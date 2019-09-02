@@ -64,7 +64,7 @@ print_greeting
 ~~~
 {: .language-python}
 ~~~
-<function __main__.print_greeting>
+`<function __main__.print_greeting>`
 ~~~
 {: .output}
 
