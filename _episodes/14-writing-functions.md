@@ -1,4 +1,4 @@
-
+---
 title: "Writing Functions"
 teaching: 10
 exercises: 15
@@ -47,7 +47,6 @@ def print_greeting():
 *   Defining a function does not run it.
     *   Like assigning a value to a variable.
 *   Must call the function to execute the code it contains.
-*   Don't forget the parentheses when calling a function.
 
 ~~~
 print_greeting()
@@ -239,7 +238,7 @@ result of call is: None
 > {: .solution}
 {: .challenge}
 
-> ## Encapsulation [DO THIS]
+> ## Encapsulation
 >
 > Fill in the blanks to create a function that takes a single filename as an argument,
 > loads the data in the file named by the argument,
