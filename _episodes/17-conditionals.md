@@ -311,7 +311,7 @@ final velocity: 30.0
 > {: .solution}
 {: .challenge}
 
-> ## Processing Small Files
+> ## Processing Small Files [MAYBE DO THIS]
 >
 > Modify this program so that it only processes files with fewer than 50 records.
 >
@@ -338,7 +338,7 @@ final velocity: 30.0
 > {: .solution}
 {: .challenge}
 
-> ## Initializing
+> ## Initializing [MAYBE DO THIS]
 >
 > Modify this program so that it finds the largest and smallest values in the list
 > no matter what the range of values originally is.
@@ -375,7 +375,7 @@ final velocity: 30.0
 > {: .solution}
 {: .challenge}
 
-> ## Using Functions With Conditionals in Pandas
+> ## Using Functions With Conditionals in Pandas [PROBABLY DO THIS]
 >
 > Functions will often contain conditionals.  Here is a short example that
 > will indicate which quartile the argument is in based on hand-coded values
