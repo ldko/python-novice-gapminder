@@ -48,7 +48,7 @@ Assertions are a simple, but powerful method for making sure that the context in
 
 ~~~
 def calc_bulk_density(mass, volume):
-    '''Return dry bulk density = powder mass / powder volume.'''
+    """Return dry bulk density = powder mass / powder volume."""
     assert volume > 0
     return mass / volume
 ~~~
@@ -63,22 +63,22 @@ If the assertion is `False`, the Python interpreter raises an `AssertionError` r
     Python attaches it to the function as the online help.
 *   Called a *docstring* (short for "documentation string").
 
+
 ~~~
-def average(values):
-    "Return average of values, or None if no values are supplied."
+def calc_bulk_density(mass, volume):
+    """Return dry bulk density = powder mass / powder volume."""
+    assert volume > 0
+    return mass / volume
 
-    if len(values) == 0:
-        return None
-    return sum(values) / len(values)
-
-help(average)
+help(calc_bulk_density)
 ~~~
 {: .language-python}
-~~~
-Help on function average in module __main__:
 
-average(values)
-    Return average of values, or None if no values are supplied.
+~~~
+Help on function calc_bulk_density in module __main__:
+
+calc_bulk_density(mass, volume)
+    Return dry bulk density = powder mass / powder volume.
 ~~~
 {: .output}
 
@@ -89,10 +89,9 @@ average(values)
 > and end with three matching characters.
 >
 > ~~~
-> """This string spans
-> multiple lines.
+> """Return dry bulk density = powder mass / powder volume.
 >
-> Blank lines are allowed."""
+> Volume must be greater than 0."""
 > ~~~
 > {: .language-python}
 {: .callout}
