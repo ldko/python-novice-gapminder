@@ -126,6 +126,24 @@ grade is C
 ~~~
 {: .output}
 
+* How can we fix that?
+
+~~~
+grade = 85
+if grade >= 90:
+    print('grade is A')
+elif grade >= 80:
+    print('grade is B')
+elif grade >= 70:
+    print('grade is C')
+~~~
+{: .language-python}
+~~~
+grade is B
+~~~
+{: .output}
+
+
 *   Does *not* automatically go back and re-evaluate if values change.
 
 ~~~
