@@ -56,6 +56,38 @@ def calc_bulk_density(mass, volume):
 
 If the assertion is `False`, the Python interpreter raises an `AssertionError` runtime exception. The source code for the expression that failed will be displayed as part of the error message. To ignore assertions in your code run the interpreter with the '-O' (optimize) switch. Assertions should contain only simple checks and never change the state of the program. For example, an assertion should never contain an assignment.
 
+*   We also use `assert` for writing tests.
+
+~~~
+def average(numbers):
+    sum = 0
+    for num in numbers:
+        sum += num
+    return sum / len('numbers')
+
+average([1, 2, 3])
+~~~
+{: .language-python}
+
+~~~
+0.8571428571428571
+~~~
+{: .output}
+
+~~~
+def test_average():
+    assert average([1, 2, 3]) == 2.0
+~~~
+{: .language-python}
+
+~~~
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in test_average
+AssertionError
+~~~
+{: .output}
+
 ## Use docstrings to provide online help.
 
 *   If the first thing in a function is a character string
