@@ -159,7 +159,7 @@ a range is not a list: range(0, 3)
     2.  Update the variable with values from a collection.
 
 ~~~
-# Sum the first 10 integers.
+# Sum the first 10 positive integers.
 total = 0
 for number in range(10):
    total = total + (number + 1)
@@ -176,6 +176,22 @@ print(total)
     *   Add that to the current value of the accumulator variable `total`.
     *   Assign that to `total`, replacing the current value.
 *   We have to add `number + 1` because `range` produces 0..9, not 1..10.
+
+*   We could write this differently to avoid `number + 1`
+
+~~~
+# Sum the first 10 positive integers.
+total = 0
+for number in range(1, 11):
+   total = total + number
+
+print(total)
+~~~
+{: .language-python}
+~~~
+55
+~~~
+{: .output}
 
 > ## Classifying Errors
 >
