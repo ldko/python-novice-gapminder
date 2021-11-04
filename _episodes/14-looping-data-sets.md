@@ -55,8 +55,8 @@ dtype: float64
 *   The most common patterns are:
     *   `*` meaning "match zero or more characters"
     *   `?` meaning "match exactly one character"
-*   Python contains the [`glob`](https://docs.python.org/3/library/glob.html) library to provide pattern matching functionality
-*   The [`glob`](https://docs.python.org/3/library/glob.html) library contains a function also called `glob` to match file patterns
+*   Python's standard library contains the [`glob`](https://docs.python.org/3/library/glob.html) module to provide pattern matching functionality
+*   The [`glob`](https://docs.python.org/3/library/glob.html) module contains a function also called `glob` to match file patterns
 *   E.g., `glob.glob('*.txt')` matches all files in the current directory 
     whose names end with `.txt`.
 *   Result is a (possibly empty) list of character strings.
@@ -115,7 +115,6 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > 1. `data/gapminder_gdp_africa.csv`
 > 2. `data/gapminder_gdp_americas.csv`
 > 3. `data/gapminder_gdp_asia.csv`
-> 4. 1 and 2 are not matched.
 >
 > > ## Solution
 > >
@@ -138,7 +137,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > print('smallest file has', fewest, 'records')
 > ~~~
 > {: .language-python}
-> Note that the [shape method](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html)
+> Note that the [`DataFrame.shape()` method][shape-method]
 > returns a tuple with the number of rows and columns of the data frame.
 >
 > > ## Solution
@@ -161,10 +160,8 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > and plots the average GDP per capita for each region over time
 > in a single chart.
 > > ## Solution
-> > This solution uses string [`rpartition method`](https://docs.python.org/3/library/stdtypes.html#str.rpartition) to
-> > split the string filename into piece but we could have also used the [pathlib
-> > module](https://docs.python.org/3/library/pathlib.html) to help us split the filename into relevant pieces for a
-> > useful legend.
+> > This solution builds a useful legend by using the [string `split` method][split-method] to
+> > extract the `region` from the path 'data/gapminder_gdp_a_specific_region.csv'.
 > > ~~~
 > > import glob
 > > import pandas as pd
@@ -172,10 +169,11 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > > fig, ax = plt.subplots(1,1)
 > > for filename in glob.glob('data/gapminder_gdp*.csv'):
 > >     dataframe = pd.read_csv(filename)
-> >     # extract region from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
-> >     # we split the string using rpartition using
-> >     # `_` as our separator, extract the _<region>.csv, and then strip the .csv extension
-> >     region = filename.rpartition('_')[-1][:-4] 
+> >     # extract <region> from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
+> >     # we will split the string using the split method and `_` as our separator,
+> >     # retrieve the last string in the list that split returns (`<region>.csv`), 
+> >     # and then remove the `.csv` extension from that string.
+> >     region = filename.split('_')[-1][:-4] 
 > >     dataframe.mean().plot(ax=ax, label=region)
 > > plt.legend(loc='upper left')
 > > plt.xticks(rotation=90)
@@ -184,3 +182,29 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > > {: .language-python}
 > {: .solution}
 {: .challenge}
+
+> ## Dealing with File Paths
+> The [`pathlib` module][pathlib-module] provides useful abstractions for file and path manipulation like
+> returning the name of a file without the file extension. This is very useful when looping over files and
+> directories. In the example below, we create a `Path` object and inspect its attributes.
+> ~~~
+> from pathlib import Path
+> 
+> p = Path("data/gapminder_gdp_africa.csv")
+> print(p.parent), print(p.stem), print(p.suffix)
+> ~~~
+> {: .language-python}
+> ~~~
+> data
+> gapminder_gdp_africa
+> .csv
+> ~~~
+> {: .output}
+> 
+> __Hint:__ It is possible to check all available attributes and methods on the `Path` object with the `dir()`
+> function!
+{: .callout}
+
+[pathlib-module]: https://docs.python.org/3/library/pathlib.html
+[shape-method]: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html
+[split-method]: https://docs.python.org/3/library/stdtypes.html#str.split
